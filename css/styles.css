@@ -10444,3 +10444,8 @@ h2 img {
   .hr-divider-white {
     width: 40vw; }
 }
+
+label.invalid{
+  font-size: .8rem;
+  color:rgb(139, 13, 13);
+}
