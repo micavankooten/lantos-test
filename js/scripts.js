@@ -55,38 +55,39 @@
 
 $("#send_comment").submit((e) => {
   e.preventDefault();
-
-
+  let valid = $("#send_comment").valid();
+  if (valid) {
+  }
 });
 
 $("#send_comment").validate({
-    errorClass: "invalid",
-    rules: {
-      // simple rule, converted to {required:true}
-      inputName: "required",
-      inputLast: "required",
-      // compound rule
-      inputEmail: {
-        required: true,
-        email: true,
-      },
-      inputPhone: {
-        required: true,
-        number: true,
-      },
-      inputMessage: "required",
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    inputName: "required",
+    inputLast: "required",
+    // compound rule
+    inputEmail: {
+      required: true,
+      email: true,
     },
-    messages: {
-      inputName: "Please specify your first name",
-      inputLast: "Please specify your last name",
-      inputEmail: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com",
-      },
-      inputPhone: {
-        required: "We need your Phone Number",
-        email: "Your Phone Number be a number",
-      },
-      inputMessage: "Please write a message", 
+    inputPhone: {
+      required: true,
+      number: true,
     },
-  });
+    inputMessage: "required",
+  },
+  messages: {
+    inputName: "Please specify your first name",
+    inputLast: "Please specify your last name",
+    inputEmail: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com",
+    },
+    inputPhone: {
+      required: "We need your Phone Number",
+      email: "Your Phone Number be a number",
+    },
+    inputMessage: "Please write a message",
+  },
+});
