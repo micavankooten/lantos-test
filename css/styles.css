@@ -10485,6 +10485,12 @@ h2 img {
   .back-resource-team {
     display: none!important;
   }
+  .no-flex-wrap {
+    flex-wrap: unset!important;
+  }
+  .btn {
+    font-size: 3.9vw!important;
+  }
 }
 
 label.invalid{
