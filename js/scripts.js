@@ -43,8 +43,11 @@
   var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
+      $("#bars").attr("src","assets/img/fa-bars-black.svg");
+      
     } else {
       $("#mainNav").removeClass("navbar-shrink");
+      $("#bars").attr("src","assets/img/fa-bars.svg");
     }
   };
   // Collapse now if page is not at top
