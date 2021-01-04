@@ -3949,20 +3949,12 @@ input[type=button].btn-block {
   margin-bottom: 0;
   list-style: none;
 }
-.nav-item {
-  width: auto!important;
-}
 
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #fff!important;
-  font-weight: 300;
-  font-size: 1.75rem;
 }
-.nav-link.active{
-  font-weight: bold;
-}
+
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
 }
@@ -10531,7 +10523,19 @@ h2 img {
     border-bottom-left-radius: unset!important;
     align-items: flex-end;
   }
-
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff!important;
+    font-weight: 300;
+    font-size: 1.75rem;
+  }
+  .nav-link.active{
+    font-weight: bold;
+  }
+  .nav-item {
+    width: auto!important;
+  }
 
 }
 
