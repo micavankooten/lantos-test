@@ -10259,6 +10259,7 @@ body {
   background: #FFFFFF;
   font-size: 1.2rem;
   font-weight: 400;
+  z-index: 2!important;
 }
 .why-section .featured-text {
   padding: 2rem;
@@ -10287,7 +10288,7 @@ body {
 .team-section {
   padding: 5rem 0;
   background: #FF7300;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .team-section .form-inline input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -10427,6 +10428,7 @@ h2 img {
     padding: 2rem 1rem;
     background: #FFFFF7;
     font-size: 1rem!important;
+
   }
 
   h3.text-orange {
@@ -10570,8 +10572,13 @@ video {
   width: 40%;
   height: auto;
   left: -24vw;
-  top: -56vh; }
+  top: -56vh;
+  z-index: 1; }
 
 #modal-menu {
   display: none;
+}
+
+.hidden{
+  overflow: hidden;
 }
