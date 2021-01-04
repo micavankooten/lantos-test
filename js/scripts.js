@@ -64,6 +64,7 @@ $("#send_comment").submit((e) => {
   e.preventDefault();
   let valid = $("#send_comment").valid();
   if (valid) {
+    //ajax servicio email externo
   }
 });
 
