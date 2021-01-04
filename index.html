@@ -30,23 +30,20 @@
   <body id="page-top">
     <!-- Navigation-->
 
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-spy" id="mainNav">
+      <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"> </a>
         <button
-          id="open-menu"
           class="navbar-toggler navbar-toggler-right"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-toggle="modal"
+          data-target="#modal-menu"
         >
           <img id="bars" src="assets/img/fa-bars.svg" />
         </button>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item ">
               <a class="nav-link js-scroll-trigger" href="#about"
                 >How it works</a
               >
@@ -64,7 +61,8 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <!-- Masthead-->
     <header class="masthead">
@@ -99,7 +97,7 @@
         </div>
       </div>
     </header>
-
+<span data-target="nav-spy" data-spy="scroll">
     <!-- About-->
     <section class="about-section" id="about">
       <div class="container">
@@ -497,87 +495,88 @@
         </div>
       </div>
     </section>
-
-    <div id="modal-menu" class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="container">
-              <div class="row">
-                <img src="assets/img/logo-lantos-white.svg" />
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <img src="assets/img/close.svg" />
-                </button>
-              </div>
-              <div class="row mt-5">
-                <ul class="navbar-nav mx-auto text-center">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active js-scroll-trigger"
-                      href="#page-top"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about"
-                      >How it works</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#why-lantos"
-                      >Why Lantos</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#team"
-                      >About us</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
+  </span>
+      <div id="modal-menu" class="modal right fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container">
+                <div class="row">
+                  <img src="assets/img/logo-lantos-white.svg" />
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <img src="assets/img/close.svg" />
+                  </button>
+                </div>
+                <nav class="row mt-5 navbar nav-spy"  id="mainNavMobile">
+                  <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active js-scroll-trigger menu_modal"
+                        href="#page-top"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger menu_modal" href="#about"
+                        >How it works</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger menu_modal" href="#why-lantos"
+                        >Why Lantos</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger menu_modal" href="#team"
+                        >About us</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger menu_modal" href="#contact"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <div class="social mx-auto">
-              <a
-                class="mx-2"
-                href="https://www.linkedin.com/company/lantos-technologies/"
-                target="_blank"
-                ><img src="assets/img/linkedin.svg"
-              /></a>
-              <a
-                class="mx-2"
-                href="https://www.facebook.com/lantostechnologies/"
-                target="_blank"
-                ><img src="assets/img/facebook.svg"
-              /></a>
-              <a
-                class="mx-2"
-                href="https://twitter.com/lantostech"
-                target="_blank"
-                ><img src="assets/img/twitter.svg"
-              /></a>
-              <a
-                class="mx-2"
-                href="https://www.instagram.com/lantostechnologies/"
-                target="_blank"
-                ><img src="assets/img/instagram.svg"
-              /></a>
+            <div class="modal-footer">
+              <div class="social mx-auto">
+                <a
+                  class="mx-2"
+                  href="https://www.linkedin.com/company/lantos-technologies/"
+                  target="_blank"
+                  ><img src="assets/img/linkedin.svg"
+                /></a>
+                <a
+                  class="mx-2"
+                  href="https://www.facebook.com/lantostechnologies/"
+                  target="_blank"
+                  ><img src="assets/img/facebook.svg"
+                /></a>
+                <a
+                  class="mx-2"
+                  href="https://twitter.com/lantostech"
+                  target="_blank"
+                  ><img src="assets/img/twitter.svg"
+                /></a>
+                <a
+                  class="mx-2"
+                  href="https://www.instagram.com/lantostechnologies/"
+                  target="_blank"
+                  ><img src="assets/img/instagram.svg"
+                /></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
       <div class="container">
@@ -623,6 +622,5 @@
         });
       });
     </script>
-    
   </body>
 </html>

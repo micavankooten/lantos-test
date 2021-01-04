@@ -35,10 +35,14 @@
 
   // Activate scrollspy to add active class to navbar items on scroll
   $("body").scrollspy({
-    target: "#mainNav",
+    target: ".nav-spy",
     offset: 100,
   });
 
+ 
+  $( ".menu_modal" ).click(function() {
+    $('#modal-menu').modal('hide')
+  });
   // Collapse Navbar
   var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
@@ -55,10 +59,6 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
-
-$( "#open-menu" ).click(function() {
-  $('#modal-menu').modal('show');
-});
 
 $("#send_comment").submit((e) => {
   e.preventDefault();

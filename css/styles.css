@@ -5507,7 +5507,7 @@ a.close.disabled {
 }
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
-  transform: translate(0, -50px);
+  transform: translate(250px,0 );
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
@@ -10151,6 +10151,11 @@ body {
   outline: none;
   background-color: transparent;
 }
+
+#mainNav .nav-link.active  {
+  font-weight: bold!important;
+}
+
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
   background-color: transparent;
