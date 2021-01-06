@@ -60,6 +60,8 @@
   $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
 
+
+
 $("#send_comment").submit((e) => {
   e.preventDefault();
   let valid = $("#send_comment").valid();
@@ -99,3 +101,4 @@ $("#send_comment").validate({
     inputMessage: "Please write a message",
   },
 });
+

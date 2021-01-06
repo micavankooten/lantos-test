@@ -87,7 +87,7 @@
                 variableWidth: false,
                 vertical: false,
                 verticalSwiping: false,
-                waitForAnimate: true,
+                waitForAnimate: false,
                 zIndex: 1000
             };
 
@@ -1330,14 +1330,14 @@
                    }
                 }
             });
-
+    
             _.$dots.attr('role', 'tablist').find('li').each(function(i) {
                 var mappedSlideIndex = tabControlIndexes[i];
-
+              
                 $(this).attr({
                     'role': 'presentation'
                 });
-
+                
                 $(this).find('button').first().attr({
                     'role': 'tab',
                     'id': 'slick-slide-control' + _.instanceUid + i,
@@ -2289,6 +2289,7 @@
 
     Slick.prototype.setSlideClasses = function(index) {
 
+       
         var _ = this,
             centerOffset, allSlides, indexOffset, remainder;
 
@@ -2300,7 +2301,7 @@
         _.$slides
             .eq(index)
             .addClass('slick-current');
-
+ 
         if (_.options.centerMode === true) {
 
             var evenCoef = _.options.slidesToShow % 2 === 0 ? 1 : 0;
@@ -2388,6 +2389,7 @@
         if (_.options.lazyLoad === 'ondemand' || _.options.lazyLoad === 'anticipated') {
             _.lazyLoad();
         }
+
     };
 
     Slick.prototype.setupInfinite = function() {

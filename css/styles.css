@@ -10463,6 +10463,7 @@ h2 img {
   .mobile {
     display: block!important;
   }
+
   .slick-dots li.slick-active button:before{
     color: #178483!important;
   }
