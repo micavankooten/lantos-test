@@ -95,7 +95,7 @@
       rel="stylesheet"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css?9" rel="stylesheet" />
+    <link href="css/styles.css?11" rel="stylesheet" />
     <!-- Slick Carousel-->
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -321,7 +321,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <h5 class="mobile"><b>Hear from a Consumer</b></h5>
+                <h5 class="mobile-1000"><b>Hear from a Consumer</b></h5>
               </div>
             </div>
             <div class="col-md-6">
@@ -337,7 +337,7 @@
                     type="video/mp4"
                   />
                 </video>
-                <h5 class="mobile"><b>Hear from an Audiologist</b></h5>
+                <h5 class="mobile-1000"><b>Hear from an Audiologist</b></h5>
               </div>
             </div>
           </div>
@@ -717,7 +717,7 @@
           mobileFirst: true,
           responsive: [
             {
-              breakpoint: 768,
+              breakpoint: 1000,
               settings: "unslick",
             },
           ],
@@ -727,7 +727,7 @@
         window.addEventListener('resize', function () {
           /* If we are above mobile breakpoint unslick the slider */
 
-          if ($(window).width() < 768) {
+          if ($(window).width() <1000) {
             if (! $(".multiple-items").hasClass("slick-initialized")) {
               return $(".multiple-items").slick({
                 dots: true,
@@ -738,7 +738,7 @@
                 mobileFirst: true,
                 responsive: [
                   {
-                    breakpoint: 768,
+                    breakpoint: 1000,
                     settings: "unslick",
                   },
                 ],
