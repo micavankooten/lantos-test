@@ -95,7 +95,7 @@
       rel="stylesheet"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css?7" rel="stylesheet" />
+    <link href="css/styles.css?9" rel="stylesheet" />
     <!-- Slick Carousel-->
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -343,19 +343,18 @@
           </div>
         </div>
       </section>
-
-      <img
+      <div
         class="divider-mobile"
-        src="assets/img/divider-mobile-2.svg"
-        style="margin-bottom: -2px"
-      />
-
+        style="margin-bottom: -2px; background: #fff;"
+      >
+        <img src="assets/img/divider-mobile-2.svg" />
+      </div>
       <div style="position: relative; overflow: hidden">
         <div class="container-fluid" style="padding: 0">
           <img class="back-resource-team" src="assets/img/back-resource.svg" />
           <img
             class="divider-desktop"
-            src="assets/img/divider-2.svg"
+            src="assets/img/divider-2.svg?2"
             style="margin-bottom: -1px"
           />
         </div>
@@ -447,9 +446,9 @@
         src="assets/img/divider-3.svg"
         style="margin-top: -0.25vw"
       />
-
-      <img class="divider-mobile" src="assets/img/divider-mobile-3.svg" />
-
+      <div class="divider-mobile" style="margin-top: -2px; background: #fff">
+        <img src="assets/img/divider-mobile-3.svg" style="z-index: 8" />
+      </div>
       <section class="contact-section" id="contact">
         <div class="container mt-5 mb-5">
           <h2 class="text-center text-mint"><b>Want to learn more?</b></h2>
@@ -722,6 +721,30 @@
               settings: "unslick",
             },
           ],
+        });
+
+        /* Do this every time window gets resized */
+        $(window).on("resize", function () {
+          /* If we are above mobile breakpoint unslick the slider */
+
+          if ($(window).width() < 768) {
+            if (! $(".multiple-items").hasClass("slick-initialized")) {
+              return $(".multiple-items").slick({
+                dots: true,
+                infinite: true,
+                arrows: false,
+                slidesToShow: 1.03,
+                slidesToScroll: 1,
+                mobileFirst: true,
+                responsive: [
+                  {
+                    breakpoint: 768,
+                    settings: "unslick",
+                  },
+                ],
+              });
+            }
+          }
         });
 
         // On before slide change
