@@ -23,7 +23,7 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 20%;
 
     display: block;
 
@@ -79,7 +79,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 0px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -88,16 +88,16 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: ''url("../assets/img/left.png")'';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: ''url("../assets/img/right.png")'';
 }
 
 .slick-next
 {
-    right: -25px;
+    right: 0px;
 }
 [dir='rtl'] .slick-next
 {
@@ -106,11 +106,11 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: ''url("../assets/img/right.png")'';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: ''url("../assets/img/left.png")'';
 }
 
 /* Dots */
