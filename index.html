@@ -101,7 +101,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css?24" rel="stylesheet" />
     <!-- Slick Carousel-->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css?9998" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css?1" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css?8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="slick/slick.js?9"></script>
@@ -306,7 +306,7 @@
 
           <div class="multiple-items mt-4 mt-md-6 row">
             <div class="col-md-6">
-              <div class="container text-left pb-5">
+              <div class="container text-left pb-5 pl-0 pr-0" >
                 <div class="videos testimonios" data-video="assets/video/testimony-02.mp4" data-type="video/mp4" data-poster="assets/img/poster-video-3.png" data-parent='multiple-items'>
 
                 </div>
@@ -315,7 +315,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="container text-left pb-5">
+              <div class="container text-left pb-5 pl-0 pr-0">
                 <div class="videos testimonios" data-video="assets/video/testimony-01.mp4" data-type="video/mp4" data-poster="assets/img/poster-video-2.png" data-parent='multiple-items'>
 
                 </div>
@@ -671,7 +671,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?2"></script>
     <script src="js/rtop.videoPlayer.1.0.2.min.js"></script>
 
     <script>
@@ -697,7 +697,7 @@
           dots: true,
           infinite: false,
           arrows: false,
-          slidesToShow: 1.07,
+          slidesToShow: 1.09,
           slidesToScroll: 1,
           adaptiveHeight: true,
           mobileFirst: true,
@@ -719,7 +719,7 @@
                 dots: true,
                 infinite: false,
                 arrows: false,
-                slidesToShow: 1.07,
+                slidesToShow: 1.09,
                 adaptiveHeight: true,
                 slidesToScroll: 1,
                 mobileFirst: true,
@@ -738,17 +738,48 @@
             // Generate a resize event if the device doesn't do it
             window.dispatchEvent(new Event("resize"));
         }, false);
-
+        // let click_element=$(this).parent().parent().parent().parent()
+        //     let elemento=click_element.parent().parent().parent().parent().parent();
+        //     let btn_element=$(this).parent().parent();
+           
+        //     if(click_element.hasClass('testimonios')){
+                
+        //         if(!btn_element.hasClass('isFullscreen')){
+        //             elemento.parent().parent().removeClass('slick-slider');
+        //             let css=elemento[0]['style']['cssText'];
+        //             elemento.removeAttr('style');
+        //             elemento.attr('data-style',css);
+        //         }else{
+        //             elemento.parent().parent().addClass('slick-track');
+                    
+        //             elemento.removeAttr('style');
+        //             let css=elemento.attr('data-style');
+        //             elemento.attr('style',css);
+        //             elemento.removeAttr('data-style');
+        //         }
+        //     }
         // On before slide change
         $(".responsive").on(
           "beforeChange",
-          function (event, slick, currentSlide, nextSlide) {}
+          function (event, slick, currentSlide, nextSlide) {
+
+          }
         );
 
         // On before slide change
         $(".responsive").on(
           "afterChange",
-          function (event, slick, currentSlide, nextSlide) {}
+          function (event, slick, currentSlide, nextSlide) {
+            let elemento=$('.multiple-items .slick-track');
+            if($('.multiple-items .videos.testimonios .rtopVideoPlayer').hasClass('isFullscreen')){
+              if(elemento.attr('data-style')&&elemento.attr('data-style')!=''){
+                elemento.parent().parent().removeClass('slick-slider');
+                elemento.removeAttr('style');
+              }
+            }
+
+
+          }
         );
       });
     </script>

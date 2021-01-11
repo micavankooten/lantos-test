@@ -11095,7 +11095,8 @@ video {
   border: 3px solid #032b2a;
 }
 .multiple-items .slick-list.draggable {
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .leadership-description{
@@ -11110,4 +11111,8 @@ video {
     .slick-next:before {
       margin-left: 25px;
     }
+  }
+  .container-video {
+    padding-left:0;
+    padding-right: 0;
   }

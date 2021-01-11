@@ -101,4 +101,3 @@ $("#send_comment").validate({
     inputMessage: "Please write a message",
   },
 });
-
