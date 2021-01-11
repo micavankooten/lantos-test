@@ -10968,7 +10968,7 @@ h2 img {
     z-index: 99;
   }
   .slick-prev:before {
-    margin-left: 2rem;
+     margin-left: 2rem;
   }
   .slick-next {
     z-index: 99;
@@ -11097,3 +11097,17 @@ video {
 .multiple-items .slick-list.draggable {
   padding-left: 20px;
 }
+
+.leadership-description{
+  height: 2.4rem;
+}
+
+  /* iPads (landscape) ----------- */
+  @media only screen and (orientation : landscape) {
+    .slick-prev:before {
+      margin-left: -25px;
+    }
+    .slick-next:before {
+      margin-left: 25px;
+    }
+  }
