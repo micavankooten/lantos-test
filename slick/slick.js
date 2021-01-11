@@ -2017,8 +2017,11 @@
                 positionProps[_.animType] = 'translate(' + x + ', ' + y + ')';
                 _.$slideTrack.css(positionProps);
             } else {
+
+                if(!_.$slideTrack.attr('data-style')){
                 positionProps[_.animType] = 'translate3d(' + x + ', ' + y + ', 0px)';
                 _.$slideTrack.css(positionProps);
+                }
             }
         }
 

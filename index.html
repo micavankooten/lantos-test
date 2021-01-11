@@ -104,7 +104,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css?1" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css?8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="slick/slick.js?9"></script>
+    <script type="text/javascript" src="slick/slick.js?96"></script>
   </head>
 
   <body id="page-top">
@@ -733,13 +733,17 @@
             }
           }
         });
-        $(window).bind('orientationchange',function(){
 
-          window.dispatchEvent(new Event("resize"));
-        })
         window.addEventListener("orientationchange", function() {
 
             window.dispatchEvent(new Event("resize"));
+            let elemento=$('.multiple-items .slick-track');
+            if($('.multiple-items .videos.testimonios .rtopVideoPlayer').hasClass('isFullscreen')){
+              if(elemento.attr('data-style')&&elemento.attr('data-style')!=''){
+                elemento.parent().parent().removeClass('slick-slider');
+                elemento.removeAttr('style');
+              }
+            }
         }, false);
 
         // On before slide change
@@ -754,19 +758,13 @@
         $(".responsive").on(
           "afterChange",
           function (event, slick, currentSlide, nextSlide) {
-            let elemento=$('.multiple-items .slick-track');
-            if($('.multiple-items .videos.testimonios .rtopVideoPlayer').hasClass('isFullscreen')){
-              if(elemento.attr('data-style')&&elemento.attr('data-style')!=''){
-                elemento.parent().parent().removeClass('slick-slider');
-                elemento.removeAttr('style');
-              }
-            }
 
 
           }
         );
       });
-    </script>
+
+          </script>
         <script src="js/videos.js"></script>
   </body>
 </html>
