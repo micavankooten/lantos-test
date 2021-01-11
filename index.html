@@ -733,31 +733,15 @@
             }
           }
         });
+        $(window).bind('orientationchange',function(){
 
+          window.dispatchEvent(new Event("resize"));
+        })
         window.addEventListener("orientationchange", function() {
-            // Generate a resize event if the device doesn't do it
+
             window.dispatchEvent(new Event("resize"));
         }, false);
-        // let click_element=$(this).parent().parent().parent().parent()
-        //     let elemento=click_element.parent().parent().parent().parent().parent();
-        //     let btn_element=$(this).parent().parent();
-           
-        //     if(click_element.hasClass('testimonios')){
-                
-        //         if(!btn_element.hasClass('isFullscreen')){
-        //             elemento.parent().parent().removeClass('slick-slider');
-        //             let css=elemento[0]['style']['cssText'];
-        //             elemento.removeAttr('style');
-        //             elemento.attr('data-style',css);
-        //         }else{
-        //             elemento.parent().parent().addClass('slick-track');
-                    
-        //             elemento.removeAttr('style');
-        //             let css=elemento.attr('data-style');
-        //             elemento.attr('style',css);
-        //             elemento.removeAttr('data-style');
-        //         }
-        //     }
+
         // On before slide change
         $(".responsive").on(
           "beforeChange",
