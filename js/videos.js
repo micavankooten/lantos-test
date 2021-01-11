@@ -11,5 +11,6 @@ $(document).ready(function () {
     showSoundControl: true,
     showFullScreen: true,
     keyboardControls: true,
+    showControlsOnHover: true,
   });
 });
