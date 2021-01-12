@@ -10814,7 +10814,11 @@ h2 img {
   display: none !important;
 }
 .mobile-1000 {
-  display: none !important;
+/* position: absolute;
+bottom:50px; */
+/* color:#fff; */
+
+  /* display: none !important; */
 }
 .medium {
   font-weight: 400;
@@ -10845,6 +10849,8 @@ h2 img {
 @media only screen and (max-width: 1000px) {
   .mobile-1000 {
     display: block !important;
+    position:relative;
+    color:#000;
   }
 }
 
@@ -11133,4 +11139,9 @@ video {
   .container-video {
     padding-left:0;
     padding-right: 0;
+  }
+
+  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after{
+    color:rgba(255, 255, 255, 0.534)!important;
+
   }
