@@ -11037,7 +11037,7 @@ bottom:50px; */
 }
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   color: #fff !important;
   font-weight: 300;
   font-size: 1.75rem;
@@ -11135,6 +11135,9 @@ video {
       height: 35vh !important;
       padding-bottom: 7vh;
     }
+    .navbar{
+      padding: 0.3rem 1rem;
+    }
   }
   .container-video {
     padding-left:0;
@@ -11144,4 +11147,9 @@ video {
   .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after{
     color:rgba(255, 255, 255, 0.534)!important;
 
+  }
+
+  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder video {left:0;top:0;}
+  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after{
+    left:0;
   }
