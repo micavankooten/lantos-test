@@ -10979,9 +10979,9 @@ bottom:50px; */
   .slick-next {
     z-index: 99;
   }
-  .slick-next:before {
+  /* .slick-next:before {
     margin-left: -3rem;
-  }
+  } */
   .back-resource-team {
     display: none !important;
   }

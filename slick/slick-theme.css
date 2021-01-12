@@ -29,6 +29,8 @@
 
   width: auto;
   height: auto;
+  min-height: 54px;
+  min-width: 52px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -88,7 +90,7 @@
 }
 
 .slick-next {
-  right: 0px;
+  right: 1rem;
 }
 [dir="rtl"] .slick-next {
   right: auto;
