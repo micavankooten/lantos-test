@@ -10991,7 +10991,7 @@ bottom:50px; */
   .btn {
     font-size: 3.9vw !important;
   }
-  
+
   .membrane-video {
     border: none !important;
   }
@@ -11040,13 +11040,10 @@ bottom:50px; */
   padding: 0.4rem 1rem;
   color: #fff;
   font-weight: 300;
-  font-size: 1.30rem;
+  font-size: 1.1rem;
 }
 .nav-link.active {
   font-weight: bold;
-}
-.nav-item {
-  width: auto !important;
 }
 
 label.invalid {
@@ -11078,7 +11075,7 @@ video {
 }
 
 .nav-item {
-  width: 10.5rem;
+  width: auto !important;
 }
 
 .back-resource-team {
@@ -11124,6 +11121,11 @@ video {
     }
     #mainNavMobile.navbar{
       margin-top:0!important;
+    }
+
+    .nav-item {
+      width: 11rem!important;
+      text-align: center;
     }
     .modal-header{
       padding:1rem 2rem!important;
