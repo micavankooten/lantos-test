@@ -10771,7 +10771,7 @@ body {
   background-position: 59vw -7vh;
   background-repeat: no-repeat;
   background-size: auto;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -10815,9 +10815,9 @@ h2 img {
   display: none !important;
 }
 .mobile-1000 {
-/* position: absolute;
+  /* position: absolute;
 bottom:50px; */
-/* color:#fff; */
+  /* color:#fff; */
 
   /* display: none !important; */
 }
@@ -10850,8 +10850,20 @@ bottom:50px; */
 @media only screen and (max-width: 1000px) {
   .mobile-1000 {
     display: block !important;
-    position:relative;
-    color:#000;
+    position: relative;
+    color: #000;
+  }
+  .slick-dots li.slick-active button:before {
+    color: #178483 !important;
+  }
+  .slick-dots li button:before {
+    color: #178483 !important;
+  }
+  #slick-team > .slick-dots li.slick-active button:before {
+    color: #fff !important;
+  }
+  #slick-team > .slick-dots li button:before {
+    color: #fff !important;
   }
 }
 
@@ -10929,18 +10941,6 @@ bottom:50px; */
     display: block !important;
   }
 
-  .slick-dots li.slick-active button:before {
-    color: #178483 !important;
-  }
-  .slick-dots li button:before {
-    color: #178483 !important;
-  }
-  #slick-team > .slick-dots li.slick-active button:before {
-    color: #fff !important;
-  }
-  #slick-team > .slick-dots li button:before {
-    color: #fff !important;
-  }
   .contact-section {
     background: #fff;
     padding: 2rem 1rem;
@@ -10975,7 +10975,7 @@ bottom:50px; */
     z-index: 99;
   }
   .slick-prev:before {
-     margin-left: 2rem;
+    margin-left: 2rem;
   }
   .slick-next {
     z-index: 99;
@@ -11105,54 +11105,56 @@ video {
   padding-right: 10px;
 }
 
-.leadership-description{
+.leadership-description {
   height: 2.4rem;
 }
 
-  /* iPads (landscape) ----------- */
-  @media only screen and (orientation : landscape) {
-    .slick-prev:before {
-      margin-left: -25px;
-    }
-    .slick-next:before {
-      margin-left: 25px;
-    }
-    #mainNavMobile .nav-link{
-      font-size: 1rem;
-    }
-    #mainNavMobile.navbar{
-      margin-top:0!important;
-    }
-
-    .nav-item {
-      width: 11rem!important;
-      text-align: center;
-    }
-    .modal-header{
-      padding:1rem 2rem!important;
-    }
-    #modal-menu .modal-header{
-      height: 75vh !important;
-    }
-    #modal-menu .modal-footer{
-      height: 35vh !important;
-      padding-bottom: 7vh;
-    }
-    .navbar{
-      padding: 0.3rem 1rem;
-    }
+/* iPads (landscape) ----------- */
+@media only screen and (orientation: landscape) {
+  .slick-prev:before {
+    margin-left: -25px;
   }
-  .container-video {
-    padding-left:0;
-    padding-right: 0;
+  .slick-next:before {
+    margin-left: 25px;
+  }
+  #mainNavMobile .nav-link {
+    font-size: 1rem;
+  }
+  #mainNavMobile.navbar {
+    margin-top: 0 !important;
   }
 
-  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after{
-    color:rgba(255, 255, 255, 0.534)!important;
-
+  .nav-item {
+    width: 11rem !important;
+    text-align: center;
   }
-
-  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder video {left:0;top:0;}
-  .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after{
-    left:0;
+  .modal-header {
+    padding: 1rem 2rem !important;
   }
+  #modal-menu .modal-header {
+    height: 75vh !important;
+  }
+  #modal-menu .modal-footer {
+    height: 35vh !important;
+    padding-bottom: 7vh;
+  }
+  .navbar {
+    padding: 0.3rem 1rem;
+  }
+}
+.container-video {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after {
+  color: rgba(255, 255, 255, 0.534) !important;
+}
+
+.rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder video {
+  left: 0;
+  top: 0;
+}
+.rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after {
+  left: 0;
+}
